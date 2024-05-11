@@ -9,6 +9,9 @@ public class TimerController : MonoBehaviour
     public float timeRemaining;
     public bool timerRunning = false;
     public TextMeshProUGUI timerLabel;
+    public GameObject winLabel;
+    public GameObject loseLabel;
+    private bool winnable = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +30,25 @@ public class TimerController : MonoBehaviour
                 timerLabel.text = Mathf.FloorToInt(timeRemaining) + "s";
             } else {
                 timeRemaining = 0;
+                timerLabel.text = Mathf.FloorToInt(timeRemaining) + "s";
                 timerRunning = false;
+                winnable = false;
+                loseLabel.SetActive(true);
             }
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pickup"))
+        {
+            other.gameObject.SetActive(false);
+            timeRemaining += 10;
+        }
+        if (other.gameObject.CompareTag("Finish") && winnable)
+        {
+            winLabel.SetActive(true);
+            timerRunning = false;
         }
     }
 }
