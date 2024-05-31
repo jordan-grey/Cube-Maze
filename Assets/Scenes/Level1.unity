@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8353,6 +8353,14 @@ PrefabInstance:
     - target: {fileID: 5439746180981157206, guid: f5d5d0bca73d90f4290802ae56f2c338, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443455156154120795, guid: f5d5d0bca73d90f4290802ae56f2c338, type: 3}
+      propertyPath: camMax
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443455156154120795, guid: f5d5d0bca73d90f4290802ae56f2c338, type: 3}
+      propertyPath: camMin
+      value: -55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
