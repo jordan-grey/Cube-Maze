@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1952,53 +1952,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414583736}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &503197211
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 503197213}
-  - component: {fileID: 503197212}
-  m_Layer: 0
-  m_Name: RotatingCube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &503197212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503197211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1db07c6fe26e14419fa7e48d281be8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedX: 25
-  speedY: 25
-  speedZ: 25
---- !u!4 &503197213
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503197211}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &508070397
 GameObject:
   m_ObjectHideFlags: 0
@@ -3565,8 +3518,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925020185}
   serializedVersion: 4
-  m_Mass: 5
-  m_Drag: 0
+  m_Mass: 15
+  m_Drag: 3
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -3596,7 +3549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ed04bce0714fc41b5bb2518ebbfc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 60
+  duration: 120
   timeRemaining: 0
   timerRunning: 0
   timerLabel: {fileID: 333690237}
@@ -6276,6 +6229,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 180dbe1d266bcd84ca6c1a7f300b386e, type: 3}
+--- !u!4 &1567545443 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6912147419506034608, guid: f5d5d0bca73d90f4290802ae56f2c338, type: 3}
+  m_PrefabInstance: {fileID: 4602177611863415929}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1582361978
 GameObject:
   m_ObjectHideFlags: 0
@@ -8285,6 +8243,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeTesting
       objectReference: {fileID: 0}
+    - target: {fileID: 8863114660676436714, guid: 5b1f7de1db9d7064eae5fe4094bf1e83, type: 3}
+      propertyPath: CamPos
+      value: 
+      objectReference: {fileID: 1567545443}
+    - target: {fileID: 8863114660676436714, guid: 5b1f7de1db9d7064eae5fe4094bf1e83, type: 3}
+      propertyPath: speedX
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863114660676436714, guid: 5b1f7de1db9d7064eae5fe4094bf1e83, type: 3}
+      propertyPath: speedY
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863114660676436714, guid: 5b1f7de1db9d7064eae5fe4094bf1e83, type: 3}
+      propertyPath: speedZ
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -8356,11 +8330,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443455156154120795, guid: f5d5d0bca73d90f4290802ae56f2c338, type: 3}
       propertyPath: camMax
-      value: 55
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7443455156154120795, guid: f5d5d0bca73d90f4290802ae56f2c338, type: 3}
       propertyPath: camMin
-      value: -55
+      value: -80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8372,7 +8346,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 705507995}
-  - {fileID: 503197213}
   - {fileID: 925020189}
   - {fileID: 3027432025220386032}
   - {fileID: 4602177611863415929}

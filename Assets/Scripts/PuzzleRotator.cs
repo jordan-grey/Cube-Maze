@@ -8,31 +8,34 @@ public class PuzzleRotator : MonoBehaviour
     public float speedX;
     public float speedY;
     public float speedZ;
+
+    public Transform CamPos;
+
     void Update()
     {
         if (Input.GetKey(KeyCode.W))
         {
-            rotateX(speedX);
+            transform.RotateAround(transform.position, CamPos.right, speedX * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            rotateX(-speedX);
+            transform.RotateAround(transform.position, CamPos.right, -speedX * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            rotateY(speedY);
+            transform.RotateAround(transform.position, CamPos.up, speedY * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rotateY(-speedY);
+            transform.RotateAround(transform.position, CamPos.up, -speedY * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.Q))
         {
-            rotateZ(speedZ);
+            transform.RotateAround(transform.position, CamPos.forward, speedZ * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.E))
         {
-            rotateZ(-speedZ);
+            transform.RotateAround(transform.position, CamPos.forward, -speedZ * Time.deltaTime);
         }
     }
 
